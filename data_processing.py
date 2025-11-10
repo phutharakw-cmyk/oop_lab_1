@@ -72,3 +72,19 @@ flitered = filtering(lambda x , y:x["country"] == "Italy",cities)
 print(aggregate("temperature",lambda a, y: max(float(x) for x in y),flitered))
 print()
 
+# Print the max temperature for all the country
+countryname = []
+max = 0
+print("the max temperature for all the cities in Italy:")
+for i in cities:
+    if i["country"] not in countryname:
+        flitered = filtering(lambda x , y:x["country"] == i["country"] ,cities)
+        tem = aggregate("temperature",lambda a, y: (a + sum(float(x) for x in y))/len(y),flitered)
+        if tem > max:
+            max = tem
+            country = i["country"]
+        countryname.append(i["country"])
+    else:
+        continue
+print(max,country)
+print()
