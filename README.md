@@ -9,6 +9,7 @@ It works similarly to Google Sheets — like what I learned from a previous lab.
 
 - `data_processing.py`: The main Python program that contains all the classes and functions.  
 - `Cities.csv`: The dataset used by the program for processing.
+- `Countries.csv`: The anoter dataset used by the program for processing.
 
 ---
 
@@ -46,3 +47,4 @@ To run the program, open a terminal in this folder and execute:
 
 ```bash
 python data_processing.py
+
